@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!--   Student bean Configuration-->
-    <bean name="student" class="com.spring.Student">
-        <property name="sid" value="101"/>
-        <property name="sname" value="Monu KD"/>
-        <property name="scourse" value="AIDS"/>
+
+    <bean name="phone" class="com.spring.core.DI.SI.propertyValueTag.Phone">
+        <property name="brand">
+        <value>Motorola</value>
+        </property>
+        <property name="ram">
+            <value>4GB</value>
+        </property>
     </bean>
+
 </beans>
