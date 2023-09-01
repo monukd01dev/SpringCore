@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="emp" class="com.spring.core.di.si.collection.Emp">
+        <property name="name" value="Monu Kumar"/>
+        <property name="number">
+            <list>
+                <value>6789123452</value>
+                <value>7952359158</value>
+                <value>8927952359</value>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Burari</value>
+                <value>Delhi</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java Core" value="3 Months"/>
+                <entry key="Python" value="2 Months"/>
+                <entry key="JavaScript" value="3 Months"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

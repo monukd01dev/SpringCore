@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="a1" class="com.spring.core.di.si.reference.A">
+        <property name="name" value="Monu Kumar"/>
+        <property name="b" ref="b1"/>
+    </bean>
+    <bean name="b1" class="com.spring.core.di.si.reference.B">
+        <property name="username" value="monukd01dev"/>
+    </bean>
+</beans>
