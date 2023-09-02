@@ -17,7 +17,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         System.out.println("SI : Collection");
-        ApplicationContext context = new ClassPathXmlApplicationContext("collection.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("si/collection.xml");
 
         Emp emp = (Emp) context.getBean("emp");
         System.out.println(emp);

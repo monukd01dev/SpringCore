@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.spring.core.di.ci.Student" name="s1">
+        <constructor-arg value="Monu Kumar"/>
+        <constructor-arg value="19"/>
+    </bean>
+    <bean class="com.spring.core.di.ci.Student" name="s2">
+        <constructor-arg value="Lalit Gupta"/>
+        <constructor-arg value="19"/>
+    </bean>
+    <bean class="com.spring.core.di.ci.Student" name="s3">
+        <constructor-arg value="Ashish Rai"/>
+        <constructor-arg value="22"/>
+    </bean>
+    <bean class="com.spring.core.di.ci.Student" name="s4">
+        <constructor-arg value="Ashu Sagar"/>
+        <constructor-arg value="23"/>
+    </bean>
+    <bean class="com.spring.core.di.ci.Student" name="s5">
+        <constructor-arg value="Krishna Mahaur"/>
+        <constructor-arg value="19"/>
+    </bean>
+<!--Aids Department bean-->
+    <bean name="department" class="com.spring.core.di.ci.Department">
+        <constructor-arg value="AI-DS"/>
+        <constructor-arg>
+            <list>
+                <ref bean="s1"/>
+                <ref bean="s2"/>
+                <ref bean="s3"/>
+                <ref bean="s4"/>
+            </list>
+        </constructor-arg>
+    </bean>
+<!--Cyber-security Department bean-->
+    <bean name="cyberdept" class="com.spring.core.di.ci.Department">
+        <constructor-arg value="CyberSecurity"/>
+        <constructor-arg>
+            <list>
+                <ref bean="s5"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

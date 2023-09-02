@@ -1,4 +1,4 @@
-package com.spring.core.DI.SI.propertyValueTag;
+package com.spring.core.di.si.reference;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /*
     Name    : Monu KD (monukd01dev)
     Project : SpringDemo
-    Date    : 28-Aug-2023
+    Date    : 01-Sep-2023
     
     Connect
     Twitter  : https://twitter.com/monukd01dev
@@ -16,33 +16,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 */
 public class App {
     public static void main(String[] args) {
-        System.out.println("SI : Property Value Tag");
-        ApplicationContext context = new ClassPathXmlApplicationContext("propertyValueTag.xml");
-        Phone phone = (Phone) context.getBean("phone");
-        System.out.println(phone);
+        System.out.println("SI : Reference");
+        ApplicationContext context = new ClassPathXmlApplicationContext("si/reference.xml");
+
+        A a1 = (A) context.getBean("a1");
+        System.out.println(a1);
+        System.out.println("Name : "+a1.getName()+"\nUsername : "+a1.getB().getUsername() );
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

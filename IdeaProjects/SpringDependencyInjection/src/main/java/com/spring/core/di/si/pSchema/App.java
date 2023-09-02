@@ -17,7 +17,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         System.out.println("SI : Using P Schema");
-        ApplicationContext context = new ClassPathXmlApplicationContext("pSchema.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("si/pSchema.xml");
         Person person = (Person) context.getBean("person");
         System.out.println(person);
     }

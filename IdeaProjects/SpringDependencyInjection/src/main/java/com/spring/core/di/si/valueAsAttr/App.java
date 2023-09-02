@@ -3,8 +3,6 @@ package com.spring.core.DI.SI.valueAsAttr;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.SortedMap;
-
 /*
     Name    : Monu KD (monukd01dev)
     Project : SpringDemo
@@ -19,7 +17,7 @@ import java.util.SortedMap;
 public class App {
     public static void main(String[] args) {
         System.out.println("SI : Value As Attribute");
-        ApplicationContext context = new ClassPathXmlApplicationContext("valueAsAttr.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("si/valueAsAttr.xml");
         Pen pen = (Pen) context.getBean("pen");
         System.out.println(pen);
     }

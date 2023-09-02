@@ -1,4 +1,4 @@
-package com.spring.core.di.si.reference;
+package com.spring.core.di.ci.typeAndIndex;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /*
     Name    : Monu KD (monukd01dev)
     Project : SpringDemo
-    Date    : 01-Sep-2023
+    Date    : 02-Sep-2023
     
     Connect
     Twitter  : https://twitter.com/monukd01dev
@@ -16,11 +16,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 */
 public class App {
     public static void main(String[] args) {
-        System.out.println("SI : Reference");
-        ApplicationContext context = new ClassPathXmlApplicationContext("reference.xml");
-
-        A a1 = (A) context.getBean("a1");
-        System.out.println(a1);
+        ApplicationContext context = new ClassPathXmlApplicationContext("ci/typeAndIndex.xml");
 
     }
 }

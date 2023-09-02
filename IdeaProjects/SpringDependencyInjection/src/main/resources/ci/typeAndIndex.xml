@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="obj" class="com.spring.core.di.ci.typeAndIndex.Checker">
+        <constructor-arg value="4"/>
+        <constructor-arg value="5"/>
+    </bean>
+    <bean name="obj1" class="com.spring.core.di.ci.typeAndIndex.Checker">
+        <constructor-arg value="4" type="int"/>
+        <constructor-arg value="5" type="int"/>
+    </bean>
+    <bean name="obj2" class="com.spring.core.di.ci.typeAndIndex.Checker">
+        <constructor-arg value="41" type="int" index="1"/>
+        <constructor-arg value="52" type="int" index="0"/>
+    </bean>
+
+</beans>
