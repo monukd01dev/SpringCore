@@ -1,4 +1,4 @@
-package com.springaw.byxml;
+package com.springaw.byannotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -17,8 +17,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
     public static void main(String[] args) {
-//        Implementing auto-wiring by XML
-        ApplicationContext context = new ClassPathXmlApplicationContext("ByXml/config.xml");
+//        Implementing auto-wiring by Annotation @Autowired
+//        where we can add annotation @autowired
+//        1. Entity Reference
+//        2. Constructor //@Qualifier("reference_name") won't work on me
+//        3. Setter method
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("ByAnnotation/config.xml");
         Employee emp = context.getBean("emp", Employee.class);
         System.out.println(emp);
     }

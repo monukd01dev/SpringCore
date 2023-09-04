@@ -1,4 +1,8 @@
 package com.springaw.byxml;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /*
     Name    : Monu KD (monukd01dev)
     Project : SpringAutoWiring
@@ -11,4 +15,11 @@ package com.springaw.byxml;
      
 */
 public class App {
+
+    public static void main(String[] args) {
+//        Implementing auto-wiring by XML
+        ApplicationContext context = new ClassPathXmlApplicationContext("ByXml/config.xml");
+        Employee emp = context.getBean("emp", Employee.class);
+        System.out.println(emp);
+    }
 }

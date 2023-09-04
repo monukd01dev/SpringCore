@@ -1,4 +1,9 @@
 package com.spring;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
 /*
     Name    : Monu KD (monukd01dev)
     Project : StandaloneCollection
@@ -11,4 +16,38 @@ package com.spring;
      
 */
 public class Me {
+    private List<String> friends;
+    private Map<String,String> details;
+    private Properties jdbc;
+
+    public Me() {
+        super();
+    }
+
+    public Me(List<String> friends, Map<String, String> details, Properties jdbc) {
+        this.friends = friends;
+        this.details = details;
+        this.jdbc = jdbc;
+    }
+
+    public List<String> getFriends() {
+        return friends;
+    }
+
+    public Map<String, String> getDetails() {
+        return details;
+    }
+
+    public Properties getJdbc() {
+        return jdbc;
+    }
+
+    @Override
+    public String toString() {
+        return "Me{" +
+                "friends=" + friends +
+                ", details=" + details +
+                ", JDBC=" + jdbc +
+                '}';
+    }
 }

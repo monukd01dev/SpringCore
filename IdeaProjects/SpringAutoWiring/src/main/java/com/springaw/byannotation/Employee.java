@@ -1,4 +1,7 @@
-package com.springaw.byxml;
+package com.springaw.byannotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /*
     Name    : Monu KD (monukd01dev)
@@ -12,13 +15,23 @@ package com.springaw.byxml;
      
 */
 public class Employee {
+
+    @Autowired
+//    @Qualifier("address1")
     private Address address;
 
     public Employee() {
         super();
     }
-
+//    @Autowired
+//    @Qualifier("address1") qualifier not work on constructor
     public Employee(Address address) {
+        this.address = address;
+    }
+
+//    @Autowired
+//    @Qualifier("address1")
+    public void setAddress(Address address) {
         this.address = address;
     }
 

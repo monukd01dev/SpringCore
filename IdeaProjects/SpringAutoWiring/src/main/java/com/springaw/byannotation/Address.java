@@ -1,4 +1,4 @@
-package com.springaw.byxml;
+package com.springaw.byannotation;
 
 /*
     Name    : Monu KD (monukd01dev)

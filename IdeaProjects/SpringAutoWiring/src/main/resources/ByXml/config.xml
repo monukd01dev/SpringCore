@@ -3,4 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean name="address" class="com.springaw.byxml.Address">
+        <constructor-arg value="India"/>
+        <constructor-arg value="Delhi"/>
+    </bean>
+
+   <bean name="emp" class="com.springaw.byxml.Employee" autowire="constructor"/><!-- //when we use constructor injection-->
+<!--    <bean name="emp" class="com.springaw.byxml.Employee" autowire="byName"/>&lt;!&ndash; //when we use setter injection&ndash;&gt;-->
+<!--    <bean name="emp" class="com.springaw.byxml.Employee" autowire="byType"/>&lt;!&ndash; //when we use setter injection&ndash;&gt;-->
 </beans>

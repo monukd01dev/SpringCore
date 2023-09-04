@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/util/spring-util.xsd
+     ">
+
+<!--    standalone collection-->
+    <util:list list-class="java.util.LinkedList" id="friends">
+        <value>Lalit</value>
+        <value>Krishna</value>
+        <value>Ashu</value>
+        <value>Ashish</value>
+        <value>Amit</value>
+    </util:list>
+    <util:map id="details" map-class="java.util.HashMap">
+        <entry key="name" value="Monu Kumar"/>
+        <entry key="age" value="19"/>
+        <entry key="interest" value="Exploration"/>
+    </util:map>
+    <util:properties id="dbconfig">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="url">jdbc:mysql:///dbname</prop>
+        <prop key="user">root</prop>
+        <prop key="password">root</prop>
+    </util:properties>
+
+
+    <bean name="me" class="com.spring.Me">
+        <constructor-arg ref="friends"/>
+        <constructor-arg ref="details"/>
+        <constructor-arg ref="dbconfig"/>
+    </bean>
+
 
 </beans>
